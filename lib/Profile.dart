@@ -11,12 +11,13 @@ class _ProfileState extends State<Profile> {
   static List<String> entries = <String>['Refrigerator ', 'Lamp', 'Air Conditioner', 'Router',];
   static List<String> entries2 = <String>['Door 1', 'Door 2', 'Door 3', 'Door 4','Door 5'];
   static List<bool> buttons = <bool>[true,true,false,true];
-  static List<bool> buttons2 = <bool>[false,true,false,false,true];
+  static List<bool> buttons2 = <bool>[false,true,false,true,true];
   static List<String> vectorsname = <String>['a1','a2','a3','a4','a5'];
   static List<String> vectorsname2 = <String>['b','b','b','b','b'];
   static List<String> usedlist = List.from(entries);
   static List<String> usedimages = List.from(vectorsname);
   static List<bool> buttonstatus = List.from(buttons);
+  static List<bool> buttonstatus2 = List.from(buttons2);
 
 
   String dropdownValue = 'Devices';
@@ -180,14 +181,14 @@ class _ProfileState extends State<Profile> {
                                 if(dropdownValue == 'Doors'){
                                   usedlist = List.from(entries2);
                                   usedimages = List.from(vectorsname2);
-                                  buttonstatus = List.from(buttons);
+                                  buttonstatus = List.from(buttons2);
                                   print(usedlist.length);
                                 }
                                 else
                                   {
                                     usedlist = List.from(entries);
                                     usedimages = List.from(vectorsname);
-                                    buttonstatus = List.from(buttons2);
+                                    buttonstatus = List.from(buttons);
                                   }
                               });
                             },
