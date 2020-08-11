@@ -195,7 +195,6 @@ class _ProfileState extends State<Profile> {
                             items: <String>[
                               'Devices',
                               'Doors',
-                              'Windows',
                             ].map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -250,11 +249,12 @@ class _ProfileState extends State<Profile> {
                                         activeColor: Color(0xffe9633b),
                                         onChanged: (bool value) {
                                           setState(() {
-                                            key = value;
+                                            buttonstatus[index] = value;
+
                                           });
                                         },
                                       ),
-                                      Text(
+                                      if(buttonstatus[index] == true ) Text(
                                         'ON',
                                         style: GoogleFonts.poppins(
                                           textStyle: TextStyle(
@@ -263,7 +263,17 @@ class _ProfileState extends State<Profile> {
                                             fontSize: 16,
                                           ),
                                         ),
-                                      )
+                                      ),
+                                      if(buttonstatus[index] == false )Text(
+                                      'OFF',
+                                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                          color: Color(0xff755fc9),
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                          ),
+                          ),
+                          ),
                                     ],
                                   ),
                                 ],
