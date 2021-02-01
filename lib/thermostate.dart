@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:smarthome/Profile.dart';
 import 'components/custombutton.dart';
 import 'package:flutter_circular_slider/flutter_circular_slider.dart';
 import 'components/intensity_editor.dart';
@@ -24,15 +25,23 @@ class _ThermostateState extends State<ThermoState> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            iconSize: 30.0,
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (_) => Profile(),));
+            },
+          ),
+        ],
+        centerTitle: true,
         backgroundColor: Color(0xff43288c),
-        title: Center(
-          child: Text(
-            'NEST THERMOSTAT',
-            style: GoogleFonts.poppins(
-              textStyle: TextStyle(
-                fontWeight: FontWeight.w800,
-                fontSize: 16,
-              ),
+        title: Text(
+          'NEST THERMOSTAT',
+          style: GoogleFonts.poppins(
+            textStyle: TextStyle(
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
             ),
           ),
         ),

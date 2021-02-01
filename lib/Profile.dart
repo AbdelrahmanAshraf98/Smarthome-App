@@ -26,16 +26,15 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         elevation: 0,
         backgroundColor: Color(0xff43288c),
-        title: Center(
-          child: Text(
-            'PROFILE',
-            style: GoogleFonts.poppins(
-              textStyle: TextStyle(
-                fontWeight: FontWeight.w800,
-                fontSize: 16,
-              ),
+        title: Text(
+          'PROFILE',
+          style: GoogleFonts.poppins(
+            textStyle: TextStyle(
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
             ),
           ),
         ),

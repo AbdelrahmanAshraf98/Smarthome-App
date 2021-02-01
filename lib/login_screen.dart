@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:smarthome/thermostate.dart';
 import 'components/custombutton.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -96,7 +97,10 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 10.0),
-                      CustomButton('LOGIN',(){print('hello');}),
+                      CustomButton('LOGIN', () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => ThermoState()));
+                      }),
                       Text(
                         'Don’t have an account yet?',
                         style: GoogleFonts.poppins(
@@ -107,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           print('create an account');
                         },
                         child: Text(
@@ -131,5 +135,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-
